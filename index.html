@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paradise Resort | Luxury Getaways</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo" onclick="showPage('home')">
+        Paradise<span>Resort</span>
+      </div>
+
+      <!-- DeskTop Menu -->
+      <div class="nav-links">
+        <a href="#rooms" onclick="showPage('home')">Rooms</a>
+        <a href="#stories" onclick="showPage('home')">Our Stories</a>
+        <a href="#reviews" onclick="showPage('home')">Client Reviews</a>
+        <a href="#gallery" onclick="showPage('home')">Gallery</a>
+        <a href="#contact" onclick="showPage('home')">Contact</a>
+        <a
+          href="https://wa.me/919876543210?text=Hello%2C%20I%20am%20interested%20in%20your%20services"
+          onclick="showPage('home')"
+          ><button class="watsapp">Watsapp Us</button></a
+        >
+      </div>
+
+      <!-- mobile menu -->
+      <!-- Hamburger Icon -->
+
+      <!-- Mobile Menu -->
+      <div class="nav-links mobile-menu" onclick="toggleMenu()" id="mobileMenu">
+        <ul class="menu-list">
+          <li class="menu-name">
+            <a href="#rooms" onclick="showPage('home')">Rooms</a>
+          </li>
+          <li class="menu-name">
+            <a href="#stories" onclick="showPage('home')">Our Stories</a>
+          </li>
+          <li class="menu-name">
+            <a href="#reviews">Client Reviews</a>
+          </li>
+          <li class="menu-name">
+            <a href="#gallery" onclick="showPage('home')">Gallery</a>
+          </li>
+          <li class="menu-name">
+            <a href="#contact" onclick="showPage('home')">Contact</a>
+          </li>
+          <li class="menu-name">
+            <a
+              href="https://wa.me/919876543210?text=Hello%2C%20I%20am%20interested%20in%20your%20services"
+              onclick="showPage('home')"
+              ><button class="watsapp">Watsapp Us</button></a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="nav-links mobile-menu">
+        <a href="#rooms" onclick="showPage('home')">Rooms</a>
+        <a href="#stories" onclick="showPage('home')">Our Stories</a>
+        <a href="#reviews" onclick="showPage('home')">Client Reviews</a>
+        <a href="#gallery" onclick="showPage('home')">Gallery</a>
+        <a href="#contact" onclick="showPage('home')">Contact</a>
+      </div> -->
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div class="container">
+      <section id="home-page" class="page-section1 active">
+        <!-- Hero Section -->
+        <section class="hero">
+          <video class="hero-video" autoplay muted loop>
+            <source src="images/video.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-overlay">
+            <h1>Welcome to Paradise Resort</h1>
+            <p>Experience luxury and tranquility like never before</p>
+            <a href="#rooms" class="btn">Explore Our Rooms</a>
+          </div>
+        </section>
+      </section>
+
+      <!-- Our Rooms Section -->
+      <section id="home-page" class="page-section active">
+        <section id="rooms">
+          <div class="section-title">
+            <h2>Our Rooms</h2>
+            <p>
+              Discover our luxurious accommodations designed for your comfort
+              and relaxation
+            </p>
+          </div>
+          <div class="rooms-container">
+            <div class="room-card" onclick="showRoomDetails('deluxe')">
+              <img
+                src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1000"
+                alt="Deluxe Room"
+                class="room-img"
+              />
+              <div class="room-content">
+                <h3>Deluxe Room</h3>
+                <h3>Availability :<span> Available</span></h3>
+                <div class="room-price">From $199/night</div>
+                <p>
+                  Spacious room with a king-sized bed, ocean view, and luxury
+                  amenities for the perfect stay.
+                </p>
+                <div class="btn">View Details</div>
+              </div>
+            </div>
+            <div class="room-card" onclick="showRoomDetails('executive')">
+              <img
+                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1000"
+                alt="Executive Suite"
+                class="room-img"
+              />
+              <div class="room-content">
+                <h3>Executive Suite</h3>
+                <h3>Availability :<span> Not Available</span></h3>
+                <div class="room-price">From $299/night</div>
+                <p>
+                  Premium suite with separate living area, private balcony, and
+                  exclusive access to executive lounge.
+                </p>
+                <div class="btn">View Details</div>
+              </div>
+            </div>
+            <div class="room-card" onclick="showRoomDetails('family')">
+              <img
+                src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1000"
+                alt="Family Cottage"
+                class="room-img"
+              />
+              <div class="room-content">
+                <h3>Family Cottage</h3>
+                <h3>Availability :<span> Available</span></h3>
+                <div class="room-price">From $399/night</div>
+                <p>
+                  Spacious cottage with two bedrooms, fully equipped kitchen,
+                  and private garden for family stays.
+                </p>
+                <div class="btn">View Details</div>
+              </div>
+            </div>
+
+            <div class="room-card" onclick="showRoomDetails('family')">
+              <img
+                src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1000"
+                alt="Family Cottage"
+                class="room-img"
+              />
+              <div class="room-content">
+                <h3>Family Cottage</h3>
+                <h3>Availability :<span> Not Available</span></h3>
+
+                <div class="room-price">From $399/night</div>
+
+                <p>
+                  Spacious cottage with two bedrooms, fully equipped kitchen,
+                  and private garden for family stays.
+                </p>
+                <div class="btn">View Details</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dining Section -->
+        <section class="dining" id="dining">
+          <div class="section-title">
+            <h2>Dining & Kitchen</h2>
+            <p>
+              Experience culinary excellence with our award-winning chefs and
+              diverse menus
+            </p>
+          </div>
+          <div class="dining-container">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000"
+                alt="Restaurant"
+                class="dining-img"
+              />
+            </div>
+            <div class="dining-content">
+              <h3>Culinary Excellence</h3>
+              <p>
+                Our resort features three distinct restaurants serving
+                international cuisine prepared with locally sourced ingredients.
+                From fresh seafood to gourmet vegetarian dishes, our culinary
+                team creates unforgettable dining experiences.
+              </p>
+              <p>
+                Executive Chef Michael Anderson brings over 20 years of
+                experience from Michelin-starred restaurants around the world.
+                His philosophy centers on seasonal ingredients and innovative
+                techniques that highlight the natural flavors of each component.
+              </p>
+              <p>
+                Enjoy breakfast with ocean views, lunch by the pool, or a
+                romantic candlelit dinner under the stars. Our sommelier-curated
+                wine list features over 200 selections from renowned vineyards
+                across the globe.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Stories Section -->
+        <section id="stories">
+          <div class="section-title">
+            <h2>Our Stories</h2>
+            <p>Discover memorable experiences shared by our guests</p>
+          </div>
+          <div class="stories-container">
+            <div class="story-card" onclick="showStoryDetails('anniversary')">
+              <img
+                src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1000"
+                alt="Anniversary"
+                class="story-img"
+              />
+              <div class="story-content">
+                <h3>Unforgettable Anniversary</h3>
+                <p>
+                  "We celebrated our 25th anniversary at Paradise Resort. The
+                  staff arranged a private beach dinner that was simply
+                  magical..."
+                </p>
+                <div class="btn">Read Full Story</div>
+              </div>
+            </div>
+            <div class="story-card" onclick="showStoryDetails('family')">
+              <img
+                src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000"
+                alt="Family Vacation"
+                class="story-img"
+              />
+              <div class="story-content">
+                <h3>Family Vacation</h3>
+                <p>
+                  "The kids club activities kept our children entertained while
+                  we enjoyed spa treatments. The family cottage was perfect..."
+                </p>
+                <div class="btn">Read Full Story</div>
+              </div>
+            </div>
+            <div class="story-card" onclick="showStoryDetails('honeymoon')">
+              <img
+                src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1000"
+                alt="Honeymoon"
+                class="story-img"
+              />
+              <div class="story-content">
+                <h3>Dream Honeymoon</h3>
+                <p>
+                  "Our honeymoon at Paradise Resort exceeded all expectations.
+                  From the rose petals on the bed to the champagne breakfast..."
+                </p>
+                <div class="btn">Read Full Story</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Client Reviews Section -->
+        <section class="reviews" id="reviews">
+          <div class="section-title">
+            <h2>Client Reviews</h2>
+            <p>What our guests say about their experience</p>
+          </div>
+          <div class="reviews-container">
+            <div class="review-card">
+              <img
+                class="review-icon"
+                src="images/fitness gym.png"
+                alt="image"
+              />
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">
+                "The level of service at Paradise Resort is unmatched. Every
+                staff member went above and beyond to ensure our stay was
+                perfect. The executive suite was spacious with breathtaking
+                ocean views."
+              </p>
+              <p class="review-author">- Sarah Johnson, New York</p>
+            </div>
+            <div class="review-card">
+              <img
+                class="review-icon"
+                src="images/fitness gym.png"
+                alt="image"
+              />
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">
+                "The level of service at Paradise Resort is unmatched. Every
+                staff member went above and beyond to ensure our stay was
+                perfect. The executive suite was spacious with breathtaking
+                ocean views."
+              </p>
+              <p class="review-author">- Sarah Johnson, New York</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+          <div class="section-title">
+            <h2>Gallery</h2>
+            <p>
+              Explore the beauty of Paradise Resort through our photo gallery
+            </p>
+          </div>
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1000"
+                alt="Resort Pool"
+                class="gallery-img"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1000"
+                alt="Beach"
+                class="gallery-img"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1000"
+                alt="Spa"
+                class="gallery-img"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?q=80&w=1000"
+                alt="Restaurant"
+                class="gallery-img"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1000"
+                alt="Room"
+                class="gallery-img"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1000"
+                alt="Lobby"
+                class="gallery-img"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+          <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for bookings and inquiries</p>
+          </div>
+          <div class="contact-container">
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4>Address</h4>
+                  <p>123 Ocean Boulevard, Paradise Island</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+1 (800) 555-1234</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@paradiseresort.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="map">
+            <!-- Google Map would be embedded here -->
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                background: #e9ecef;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <p>Google Map Location</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Room Details Page -->
+      <section id="room-details-page" class="page-section">
+        <div class="room-details-container">
+          <button class="btn btn-back" onclick="showPage('home')">
+            <i class="fas fa-arrow-left"></i> Back to Rooms
+          </button>
+          <div class="room-details-header">
+            <h1 id="room-title">Executive Suite</h1>
+            <p id="room-subtitle">
+              Luxury accommodation with panoramic ocean views
+            </p>
+            <div class="room-details-price" id="room-price">$299/night</div>
+          </div>
+
+          <div class="room-details-content">
+            <div>
+              <div class="room-details-gallery">
+                <div class="room-main-img">
+                  <img id="room-main-img" src="" alt="Room" />
+                </div>
+                <div class="room-thumb" onclick="changeRoomImage(this)">
+                  <img
+                    src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?q=80&w=1000"
+                    alt="Suite Bathroom"
+                  />
+                </div>
+                <div class="room-thumb" onclick="changeRoomImage(this)">
+                  <img
+                    src="https://images.unsplash.com/photo-1592229505726-cf121b0d1b7d?q=80&w=1000"
+                    alt="Suite View"
+                  />
+                </div>
+                <div class="room-thumb" onclick="changeRoomImage(this)">
+                  <img
+                    src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1000"
+                    alt="Suite Balcony"
+                  />
+                </div>
+                <div class="room-thumb" onclick="changeRoomImage(this)">
+                  <img
+                    src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=1000"
+                    alt="Suite Living Area"
+                  />
+                </div>
+              </div>
+
+              <div class="room-description">
+                <h2>Room Description</h2>
+                <p id="room-description"></p>
+              </div>
+
+              <div class="room-amenities">
+                <h2>Amenities</h2>
+                <div class="amenities-grid" id="room-amenities">
+                  <!-- Filled by JavaScript -->
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-form-container">
+              <h2>Book Your Stay</h2>
+              <form class="booking-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="checkin">Check-in Date</label>
+                    <input type="date" id="checkin" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="checkout">Check-out Date</label>
+                    <input type="date" id="checkout" required />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="adults">Adults</label>
+                    <select id="adults" required>
+                      <option value="1">1 Adult</option>
+                      <option value="2" selected>2 Adults</option>
+                      <option value="3">3 Adults</option>
+                      <option value="4">4 Adults</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="children">Children</label>
+                    <select id="children">
+                      <option value="0" selected>No Children</option>
+                      <option value="1">1 Child</option>
+                      <option value="2">2 Children</option>
+                      <option value="3">3 Children</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" required />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="special">Special Requests</label>
+                  <textarea
+                    id="special"
+                    placeholder="Any special requests or requirements"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn">Complete Booking</button>
+
+                <div class="price-details">
+                  <div class="price-item">
+                    <span id="room-price-display">$299 x 3 nights</span>
+                    <span>$897</span>
+                  </div>
+                  <div class="price-item">
+                    <span>Resort fee</span>
+                    <span>$45</span>
+                  </div>
+                  <div class="price-item">
+                    <span>Taxes</span>
+                    <span>$89.40</span>
+                  </div>
+                  <div class="total-price">
+                    <span>Total</span>
+                    <span>$1,031.40</span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Details Page -->
+      <section id="story-details-page" class="page-section">
+        <div class="story-details-container">
+          <button class="btn btn-back" onclick="showPage('home')">
+            <i class="fas fa-arrow-left"></i> Back to Stories
+          </button>
+
+          <div class="story-header">
+            <h1 id="story-title">Unforgettable Anniversary</h1>
+            <p class="author" id="story-author">By Sarah & James Thompson</p>
+          </div>
+
+          <div class="story-featured-img">
+            <img id="story-image" src="" alt="Story Image" />
+          </div>
+
+          <div class="story-content" id="story-content">
+            <!-- Filled by JavaScript -->
+          </div>
+
+          <div class="related-stories">
+            <h2>More Guest Stories</h2>
+            <div class="stories-container">
+              <div class="story-card" onclick="showStoryDetails('family')">
+                <img
+                  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000"
+                  alt="Family Vacation"
+                  class="story-img"
+                />
+                <div class="story-content">
+                  <h3>Family Vacation</h3>
+                  <p>
+                    "The kids club activities kept our children entertained
+                    while we enjoyed spa treatments..."
+                  </p>
+                  <div class="btn">Read Full Story</div>
+                </div>
+              </div>
+              <div class="story-card" onclick="showStoryDetails('honeymoon')">
+                <img
+                  src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1000"
+                  alt="Honeymoon"
+                  class="story-img"
+                />
+                <div class="story-content">
+                  <h3>Dream Honeymoon</h3>
+                  <p>
+                    "Our honeymoon at Paradise Resort exceeded all
+                    expectations..."
+                  </p>
+                  <div class="btn">Read Full Story</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <div class="footer-logo">Paradise<span>Resort</span></div>
+          <p>
+            Luxury resort offering unforgettable experiences with stunning ocean
+            views and world-class amenities.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <a href="#rooms" onclick="showPage('home')">Rooms & Suites</a>
+            </li>
+            <li><a href="#dining" onclick="showPage('home')">Dining</a></li>
+            <li><a href="#gallery" onclick="showPage('home')">Gallery</a></li>
+            <li>
+              <a href="#stories" onclick="showPage('home')">Our Stories</a>
+            </li>
+            <li>
+              <a href="#contact" onclick="showPage('home')">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Ocean Boulevard</li>
+            <li><i class="fas fa-phone"></i> +1 (800) 555-1234</li>
+            <li><i class="fas fa-envelope"></i> info@paradiseresort.com</li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Newsletter</h4>
+          <p>Subscribe to our newsletter for special offers and updates.</p>
+          <form>
+            <input type="email" placeholder="Your Email Address" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Paradise Resort. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
